@@ -39,10 +39,10 @@ def create_dummy_slices(final_data):
             if len(slice_lines) > 5:
                 slices.append("\n".join(slice_lines))
 
-        # Limit to 20 slices as per the original code
         item["slices"] = slices[:20] if slices else [item["code"][:1000]]
 
     return final_data
+
 
 
 if __name__ == "__main__":

@@ -18,7 +18,6 @@ def train_kmeans(n_clusters, inputs, random_state=0):
         batch_size=min(3000, len(inputs))
     )
     
-    # Fit in batches if data is large
     for i in range(0, len(inputs), 3000):
         batch = inputs[i:i+3000]
         batch = np.array(batch, dtype=np.float32)
